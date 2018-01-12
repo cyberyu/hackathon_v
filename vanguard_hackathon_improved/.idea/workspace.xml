@@ -30,8 +30,8 @@
       <file leaf-file-name="lambda_function.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lambda_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.449838">
-              <caret line="828" column="56" selection-start-line="828" selection-start-column="56" selection-end-line="828" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.96763754">
+              <caret line="332" column="16" selection-start-line="332" selection-start-column="16" selection-end-line="332" selection-end-column="16" />
               <folding>
                 <element signature="e#330#367#0" expanded="true" />
               </folding>
@@ -193,7 +193,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robert_topic_risk" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Python.mms_message">
@@ -950,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lambda_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.449838">
-          <caret line="828" column="56" selection-start-line="828" selection-start-column="56" selection-end-line="828" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.96763754">
+          <caret line="332" column="16" selection-start-line="332" selection-start-column="16" selection-end-line="332" selection-end-column="16" />
           <folding>
             <element signature="e#330#367#0" expanded="true" />
           </folding>

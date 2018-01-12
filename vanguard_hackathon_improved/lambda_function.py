@@ -97,7 +97,6 @@ def know_retirement(intent, session):
     card_title = intent['name']
     speech_output = "Great choice! To get started I will need some information. Are you currently a Vanguard client?"
 
-
     reprompt_text =  "To get started I will need some information. Are you currently a Vanguard client?"
 
     should_end_session = False
