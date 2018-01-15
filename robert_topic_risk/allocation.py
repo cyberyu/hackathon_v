@@ -101,4 +101,16 @@ def Main():
 	#embed()
 	return
 
-Main()
+
+def generateChart():
+
+	risktype = ['conservative', 'moderate', 'aggressive']
+	for maxAge in range(23,125,1):
+		for r in risktype:
+			alloc = GetAllocation(maxAge, r)
+			PlotChart(alloc)
+
+
+#Main()
+
+generateChart()
