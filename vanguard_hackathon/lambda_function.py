@@ -247,9 +247,7 @@ def Get_started(intent, session):
 
 #Collect more investment behavior
 def Collect_investment_behavior(intent, session):
-
     #global g_investment_behavior
-
     card_title = intent['name']
 
     session_attributes = {}

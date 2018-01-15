@@ -80,7 +80,7 @@ def get_welcome_response():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "Welcome to Vanguard Investment Behavior Demo. " \
+    speech_output = "Welcome to Vanguard AI V MAP Investment Allocation Demo. " \
                     "Tell me about your investment behavior"
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
@@ -97,7 +97,11 @@ def Collect_investment_behavior(intent, session):
 
     session_attributes = {}
     investment_behavior = intent['slots']['investment']['value']
-    
+    #investment_behavior = intent['slots']['investment']
+
+    print ("investment behavor is " + str(list(iter(investment_behavior))))
+    #print ("investment behavor name is " + str(list(iter(investment_behavior['name']))))
+
     g_investment_behavior = g_investment_behavior +' '+ investment_behavior
 
     speech_output = "Okay, what else ? "
@@ -118,9 +122,9 @@ def end_question_behavior(intent, session):
 
     global g_investment_behavior
 
-
     speech_output = "Okay, let me read back your investment behavior "+ g_investment_behavior
-    r = requests.post('http://54.89.99.129:5001/clsfy', data = {'textinput':g_investment_behavior})
+
+    r = requests.post('http://54.173.193.196:5001/clsfy', data = {'textinput':g_investment_behavior})
 
     prediction = r.json()['y']
 
@@ -258,10 +262,6 @@ def on_intent(intent_request, session):
         return send_key(intent, session)
     elif intent_name =="end_of_behavior":
         return end_question_behavior(intent, session)
-    elif intent_name=="send_key":
-        return send_key(intent, session)
-    elif intent_name=="verify_authentication":
-        return verify_key(intent, session)
     elif intent_name == "investment_behavior":
         return Collect_investment_behavior(intent, session)
     # elif intent_name == "SendPicture":
