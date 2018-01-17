@@ -72,7 +72,10 @@ def GetStatement(age,alloc):
 def PlotChart(alloc):
 	labels = ['US Stock','International Stock','US Bond','International Bond','Short-term TIPS']
 	fracs = [alloc['Total Stock Market Index'],alloc['Total International Stock Index'],alloc['Total Bond Market II Index'],alloc['Total International Bond Index'],alloc['Short-Term Inflation-Protected Securitie']]
-	colors = ['red','yellow','blue','green','gray']
+	#colors = ['red','yellow','blue','green','gray']
+	colors = ['#96151D','#EBBA00','#005293','#A8B400','#A8A093']
+
+
 	plt.pie(fracs, colors=colors)
 	plt.legend(labels=['%s, %1.1f' % (l, s) for l, s in zip(labels, [i * 100 for i in fracs])],loc='best')
 	plt.axis('equal')

@@ -281,7 +281,6 @@ def Collect_investment_behavior(intent, session):
     session_attributes = {}
     session_attributes['previous_node'] = 'Collect_investment_behavior'
 
-
     card_title = intent['name']
 
     investment_behavior = intent['slots']['investment']['value']
@@ -549,7 +548,7 @@ def send_chart_aggressive(intent, session):
 def much_better_allocation(intent, session):
     card_title = intent['name']
     session_attributes = {}
-    speech_output = "Sure! ... Done. I also notice that you are a Star Wars fan, the newest episode premieres this Friday, and may the force be with you! "
+    speech_output = "Sure! ... Done. May the force be with you! "
 
     reprompt_text = " "
     should_end_session = True
@@ -676,14 +675,12 @@ def send_key(intent, session):
 
 def handle_session_end_request():
     card_title = "Session Ended"
-    speech_output = "Thank you for trying the Vanguard Virtual Assitant. " \
+    speech_output = "Thank you for trying the Vanguard Virtual Assistant. " \
                     "Have a nice day! "
     # Setting this to true ends the session and exits the skill.
     should_end_session = True
     return build_response({}, build_speechlet_response(
         card_title, speech_output, None, should_end_session))
-
-
 
 
 # --------------- Events ------------------
